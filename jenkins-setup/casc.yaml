@@ -1,0 +1,47 @@
+jenkins:
+  systemMessage: "Jenkins configured automatically via Configuration as Code"
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: "admin"
+          password: "admin123"
+unclassified:
+  location:
+    url: "http://localhost:8080/"
+# jenkins:
+#   systemMessage: "Welcome to Jenkins Auto Setup!"
+#   securityRealm:
+#     local:
+#       allowsSignup: false
+#       users:
+#         - id: admin
+#           password: admin123
+#   authorizationStrategy:
+#     loggedInUsersCanDoAnything:
+#       allowAnonymousRead: false
+#   remotingSecurity:
+#     enabled: true
+#   disableRememberMe: false
+#   numExecutors: 2
+#   mode: NORMAL
+#   labelString: built-in
+#   nodes:
+#     - permanent:
+#         name: agent-1
+#         numExecutors: 1
+#         remoteFS: /home/jenkins
+#         launcher: jnlp
+
+# unclassified:
+#   location:
+#     url: http://localhost:8080
+#   gitSCM:
+#     globalConfigName: jenkins
+#     globalConfigEmail: jenkins@example.com
+
+# security:
+#   queueItemAuthenticator:
+#     authenticators:
+#       - global:
+#           strategy: triggeringUsersAuthorizationStrategy
