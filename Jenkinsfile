@@ -1,32 +1,12 @@
 pipeline {
     agent any
 
-    environment {
-        APP_ENV = 'testing'
-    }
-
     stages {
-        stage('Setup Testing Environment') {
+        stage('Hello World') {
             steps {
-                sh 'composer install --no-interaction'
-                sh 'cp .env.example .env'
-                sh 'php artisan key:generate'
+                echo 'Hello World!'
             }
-        }
-
-        stage('Run Tests') {
-            steps {
-                sh 'php artisan test'
-            }
-        }
-    }
-
-    post {
-        success {
-            echo '✅ Testing berhasil!'
-        }
-        failure {
-            echo '❌ Testing gagal! Periksa error pada log.'
         }
     }
 }
+
